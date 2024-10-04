@@ -18,6 +18,7 @@ console.log("Using API Key:", process.env.API_KEY);
 const generate = async (prompt) => {
     try {
         const result = await model.generateContent(prompt);
+        console.log(result.response.text());
         return result.response.text(); // Ensure to return the generated text
     } catch (err) {
         console.error(err);
